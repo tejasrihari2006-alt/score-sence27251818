@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import time
 
-st.set_page_config(page_title="GPA Predictor Ultra", layout="wide")
+st.set_page_config(page_title="Score-sence", layout="wide")
 
 # 🌈 Animated Gradient Background + Glass Effect
 st.markdown("""
@@ -49,7 +49,7 @@ label {color:white !important; font-size:18px !important;}
 
 model = joblib.load("model.pkl")
 
-st.markdown("<div class='title'>🎓 ULTRA GPA Predictor</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>🎓 Score-Sence</div>", unsafe_allow_html=True)
 st.write("")
 
 col1, col2 = st.columns(2)
@@ -89,5 +89,6 @@ with col2:
         for i in range(int(result * 10)):
             time.sleep(0.02)
             progress.progress(i)
+
 
     st.markdown("</div>", unsafe_allow_html=True)
